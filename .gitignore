@@ -1,0 +1,6 @@
+build
+node-modules
+.idea
+*.psd
+*.pdf
+mockup
