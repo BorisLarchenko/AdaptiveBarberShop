@@ -12,14 +12,14 @@ var run = require("run-sequence");
 var plumber = require('gulp-plumber');
 
 gulp.task('style', function () {
-  return gulp.src('./source/less/test-body.less')
+  return gulp.src('./source/less/style.less')
     .pipe(less())
     .pipe(postcss([
       autoprefixer()
     ]))
     .pipe(gulp.dest('./source/css'))
     .pipe(server.stream())
-    .pipe(rename('test-body.min.css'))
+    .pipe(rename('style.min.css'))
     .pipe(minifyCss())
     .pipe(gulp.dest('./source/css/'));
   });
@@ -65,7 +65,7 @@ gulp.task("webp", function () {
 });
 
 gulp.task('style-prod', function () {
-  return gulp.src('./source/less/test-body.less')
+  return gulp.src('./source/less/style.less')
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -73,7 +73,7 @@ gulp.task('style-prod', function () {
     ]))
     .pipe(gulp.dest('./build/css'))
     .pipe(server.stream())
-    .pipe(rename('test-body.min.css'))
+    .pipe(rename('style.min.css'))
     .pipe(minifyCss())
     .pipe(gulp.dest('./build/css/'));
 });
@@ -87,7 +87,7 @@ gulp.task("serve-prod", ["style-prod"], function () {
   server.init({
     server: "./build"});
   gulp.watch("./source/less/**/*.less", ["style-prod"]);
-  gulp.watch("./source/*.html", ['prod-copy']).on('change', server.reload);
+  gulp.watch("./source/*.html", ['copy-prod-html']).on('change', server.reload);
 });
 
 gulp.task("build", function (done) {
