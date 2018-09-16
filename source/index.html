@@ -2,16 +2,61 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta	name="viewport"	content="width=device-width,initial-scale=1">
 	<title>Барбершоп Бородинский</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Kosugi&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
-	<header class="page-header">
-	<h1 class="visually-hidden">Барбершоп Бородинский</h1>
-		<img class="page-header__logo" src="./img/logotype-mobile.png" alt="Барбершоп Бородинский" width="226" height="30">
-</header>
-	<main></main>
-	<footer></footer>
+
+		<header class="page-header">
+			<div class="container">
+				<a class="container__logo">
+					<picture>
+						<source media="(min-width: 1200px)" srcset="img/Barber-desktop.svg">
+						<source media="(min-width: 768px)" srcset="img/Barber-tablet.svg">
+						<img class="container__logo--image" src="./img/Barber-mobil.svg" alt="Барбершоп Бородинский" width="226" height="30">
+					</picture>
+
+				</a>
+				<nav class="main-nav main-nav--opened">
+					<div class="main-nav__wraper">
+						<button class="main-nav__togle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+						<ul class="main-nav__list site-list">
+							<li class="site-list__item site-list__item--active"><a>Главная</a></li>
+							<li class="site-list__item"><a href="#">Наши работы</a></li>
+							<li class="site-list__item"><a href="#">Записаться</a></li>
+							<li class="site-list__item"><a href="#">Контакты</a></li>
+							<li class="site-list__item"><a href="#">Академия</a></li>
+						</ul>
+						<ul class="main-nav__list user-list">
+							<li class="user-list__item">
+								<a class="user-list__login" href="#">Войти</a>
+							</li>
+
+
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+		</header>
+
+
+
+
+	<!--<main class="page-main">-->
+		<!--<h1 class="visually-hidden">Барбершоп Бородинский - истинно мужская классика</h1>-->
+		<!--<section class="stats">-->
+			<!--<header class="stats__header">-->
+				<!--<h2 class="visually-hidden">Статистика Барбершопа</h2>-->
+				<!--<b class="stats__slogan">Стрижка у нас - это выгодно</b>-->
+				<!--<p class="stats__intro">Мужская стрижка требует точно подхода. Обратимся к статистике:</p>-->
+			<!--</header>-->
+		<!--</section>-->
+
+	<!--</main>-->
+	<!--<footer></footer>-->
+ <script src="./js/menueButton.js"></script>
 </body>
 </html>

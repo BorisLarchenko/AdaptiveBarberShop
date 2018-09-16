@@ -88,6 +88,7 @@ gulp.task("serve-prod", ["style-prod"], function () {
     server: "./build"});
   gulp.watch("./source/less/**/*.less", ["style-prod"]);
   gulp.watch("./source/*.html", ['copy-prod-html']).on('change', server.reload);
+  gulp.watch("source/img/**/*.{png,jpg,svg}", {cwd:'./'}, ['images-prod']);
 });
 
 gulp.task("build", function (done) {
