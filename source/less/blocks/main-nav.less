@@ -1,8 +1,5 @@
  .main-nav {
-  display: flex;
-  justify-content: normal;
-  align-items: center;
-  background-color: #826550;
+   background-color: #826550;
 }
 
  .main-nav__togle {
@@ -160,22 +157,22 @@
     display: none;
   }
   .main-nav {
-    width: 768px;
     background-color: #000000;
   }
   .main-nav__wraper {
-    width: 768px;
+    width: auto;
     display: flex;
   }
   .main-nav__list {
     position: static;
     display: flex;
+    justify-content: space-between;
   }
 
 }
  @media (min-width: 1200px) {
-   .main-nav {
-     width: 1200px;
-   }
+    .main-nav__list {
+      /*justify-content: space-around;*/
+    }
 
  }
