@@ -6,6 +6,8 @@
   margin: -20px;
 }
 
+
+
 @font-face {
   font-family: 'PT Sans Narrow';
   src: url('../fonts/pt_sans_narrow.woff2') format('woff2'), /* Super Modern Browsers */
@@ -28,6 +30,50 @@ body {
   padding: 0 20px;
 }
 
+.container-one--black {
+  background-color: #000000;
+}
+
+.container-one--color {
+  background-color: #ffffff;
+}
+
+.container-one--grey {
+  background-color: #242424;
+}
+
+.container-one--linear-gradient {
+  min-height: 35px;
+  position: relative;
+}
+
+.container-one--linear-gradient::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(to right top, #ffffff 49% , @darkMobile 50% );
+}
+
+.container-one--linear-gradient::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(to right bottom, @darkMobile 49% , #ffffff 50% );
+}
+
+/*.container-one_triangle {
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-left: 480px solid transparent;
+  border-right: 480px solid transparent;
+  border-top: 35px solid red;
+}*/
+
 @media (min-width: 768px) {
   .container-one {
     width: 640px;
@@ -35,6 +81,21 @@ body {
   }
   .container-one--black {
     background-color: #000000;
+  }
+  .container-one--color {
+    background-color: @greyTabDesc;
+  }
+  .container-one--grey {
+    background-color: #353535;
+  }
+  .container-one--linear-gradient {
+    min-height: 33px;
+  }
+  .container-one--linear-gradient::after {
+    background-image: linear-gradient(to right bottom, @greyTabDesc 49% , #ffffff 50% );
+  }
+  .container-one--linear-gradient::before {
+    background-image: linear-gradient(to right top, #ffffff 50%, @greyTabDesc 49%  );
   }
 }
 @media (min-width: 1200px) {
@@ -44,6 +105,15 @@ body {
   }
   .container-one--black {
     background-color: #000000;
+  }
+  .container-one--color {
+    background-color: @greyTabDesc;
+  }
+  .container-one--grey {
+    background-color: #353535;
+  }
+  .container-one--linear-gradient {
+    min-height: 65px;
   }
 }
 

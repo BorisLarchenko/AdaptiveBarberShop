@@ -8,18 +8,17 @@
 	<link href="https://fonts.googleapis.com/css?family=Kosugi&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
-	<div class="container-one container-one--black">
-		<header class="page-header">
+	<header class="page-header">
+		<div class="container-one container-one--black">
 			<div class="container">
 				<a class="container__logo">
 					<picture>
 						<source media="(min-width: 1200px)" srcset="img/Barber-desktop.svg">
 						<source media="(min-width: 768px)" srcset="img/Barber-tablet.svg">
-						<img class="container__logo--image" src="./img/Barber-mobil.svg" alt="Барбершоп Бородинский" width="226" height="30">
+						<img class="container__logo--image" src="img/Barber-mobil.svg" alt="Барбершоп Бородинский" width="226" height="30">
 					</picture>
-
 				</a>
-				<nav class="main-nav main-nav--opened">
+				<nav class="main-nav main-nav--closed">
 					<div class="main-nav__wraper">
 						<button class="main-nav__togle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 						<ul class="main-nav__list site-list">
@@ -39,26 +38,77 @@
 					</div>
 				</nav>
 			</div>
+		</div>
+	</header>
 
-		</header>
-	</div>
+	<main class="page-main">
+		<div class="container-one container-one--color">
+			<h1 class="visually-hidden">Барбершоп Бородинский - истинно мужская классика</h1>
+			<section class="stats">
+				<header class="stats__header">
+					<h2 class="visually-hidden">Статистика Барбершопа</h2>
+					<b class="stats__slogan">Стрижка у нас <br>это выгодно!</b>
+					<p class="stats__intro">Мужская стрижка требует точно подхода. Обратимся к статистике:</p>
+				</header>
+				<table class="stats__table table-stat">
+					<tr class="table-stat__row">
+						<td class="table-stat__data"><span>1500<sup>*</sup></span></td>
+						<td class="table-stat__data">рублей вложений</td></tr>
+					<tr class="table-stat__row table-stat__row--fair">
+						<td class="table-stat__data"><span>7200</span></td>
+						<td class="table-stat__data">секунд времени мастера</td></tr>
+					<tr class="table-stat__row">
+						<td class="table-stat__data"><span>90000</span></td>
+						<td class="table-stat__data">постриженных волос</td></tr>
+					<tr class="table-stat__row table-stat__row--fair">
+						<td class="table-stat__data"><span>500000<sup>*</sup></span></td>
+						<td class="table-stat__data">лайков и комплементов</td></tr>
+
+				</table>
+				<p class="stats-table-description"><sup>*</sup> - приведенные данные ложь</p>
+			</section>
+		</div>
+		<div class="container-one container-one--grey">
+			<section class="slogans">
+				<div class="slogans-wrapper slider">
+					<ul class="slogans__list slider__list">
+					<li class="slogans__current slogans__current--fast slider__item">
+						<h2 class="slogans__title">Быстро</h2>
+						<p class="slogans__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
+					</li>
+					<li class="slogans__current slogans__current--cool slider__item">
+						<h2 class="slogans__title">Круто</h2>
+						<p class="slogans__description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино.
+							Во всяком случае внешне.</p>
+					</li>
+					<li class="slogans__current slogans__current--price slider__item">
+						<h2 class="slogans__title">Дорого</h2>
+						<p class="slogans__description">Наши мастера — профессионалы своего делаи не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
+					</li>
+				</ul>
+					<div class="slider__buttons">
+						<button class="slider__switch slider__switch--active" type="button"></button>
+						<button class="slider__switch" type="button"></button>
+						<button class="slider__switch" type="button"></button>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		<div class="container-one container-one--linear-gradient"></div>
 
 
 
 
+		<div class="container-one container-one--white">
+			<section class="news">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus assumenda, beatae consequatur harum iste laborum, molestiae nihil non nostrum nulla quae qui quia quidem quos temporibus ullam velit, veritatis voluptate.</p>
+			</section>
+		</div>
+			<section class="review"></section>
 
-	<!--<main class="page-main">-->
-		<!--<h1 class="visually-hidden">Барбершоп Бородинский - истинно мужская классика</h1>-->
-		<!--<section class="stats">-->
-			<!--<header class="stats__header">-->
-				<!--<h2 class="visually-hidden">Статистика Барбершопа</h2>-->
-				<!--<b class="stats__slogan">Стрижка у нас - это выгодно</b>-->
-				<!--<p class="stats__intro">Мужская стрижка требует точно подхода. Обратимся к статистике:</p>-->
-			<!--</header>-->
-		<!--</section>-->
-
-	<!--</main>-->
-	<!--<footer></footer>-->
- <script src="./js/menueButton.js"></script>
+	</main>
+	<script src="./js/menueButton.js"></script>
+	<script src="./js/slider.js"></script>
 </body>
 </html>

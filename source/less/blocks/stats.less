@@ -1,0 +1,180 @@
+.stats__header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+.stats__slogan {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.stats__intro {
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.table-stat {
+  width: 320px;
+  left: -20px;
+  position: relative;
+
+
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table-stat__row {
+  background-color: #404040;
+}
+
+.table-stat__row--fair {
+  background-color: #4e4e4e
+}
+
+.table-stat__data {
+  padding: 25px 25px;
+  text-align: right;
+  color: #f7f4f1;
+}
+
+.table-stat__data:first-child {
+  text-align: left;
+  font-size: 40px;
+}
+
+.stats-table-description {
+  text-align: center;
+  background-color: @darkMobile;
+  margin: 0 -20px;
+  padding-top: 20px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 768px) {
+  .stats {
+    position: relative;
+  }
+  .stats__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+    position: absolute;
+    top: -180px;
+    background-color: #ffffff;
+    width: 100%;
+  }
+  .stats__intro,
+  .stats__slogan {
+    width: 225px;
+    margin-bottom: 35px;
+    margin-top: 38px;
+  }
+
+  .stats__slogan::after {
+    content: "\002A\00a0 - приведенные данные ложь";
+    display: block;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 27px;
+    text-transform: lowercase;
+    opacity: 0.3;
+  }
+  .stats__table tbody {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  .table-stat {
+    left: 0;
+    width: auto;
+  }
+  .table-stat__row {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table-stat__row:first-child,
+  .table-stat__row:last-child {
+    background-color: #404040;
+  }
+
+  .table-stat__row:nth-child(3) {
+    background-color: @greyTabDesc;
+  }
+
+
+  .table-stat__data {
+    padding: 0 25px;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .table-stat__data:first-child {
+    margin-top: 25px;
+    font-size: 72px;
+  }
+  .table-stat__data:last-child {
+    margin-bottom: 30px;
+  }
+
+  .stats-table-description {
+    display: none;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .stats {
+    margin-bottom: -159px;
+  }
+
+  .stats__header {
+    flex-direction: column;
+    position: absolute;
+    top: -159px;
+    background-color: #ffffff;
+    width: 33%;
+    z-index: 1;
+  }
+
+
+  .stats__table {
+    top: -159px
+  }
+
+
+  .stats__table tbody {
+    width: 77%;
+    /*margin-top: -159px;*/
+    margin-left: 33%;
+  }
+  .stats__intro, .stats__slogan {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    padding-left: 30px;
+  }
+  .stats__intro {
+    padding-bottom: 7px;
+  }
+  .stats__slogan::after {
+    display: none;
+  }
+  .stats__intro::after {
+    content: "\002A\00a0 - приведенные данные ложь";
+    display: block;
+    padding-top: 45px;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 27px;
+    text-transform: lowercase;
+    opacity: 0.3;
+  }
+}
