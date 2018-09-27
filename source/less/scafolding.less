@@ -6,8 +6,6 @@
   margin: -20px;
 }
 
-
-
 @font-face {
   font-family: 'PT Sans Narrow';
   src: url('../fonts/pt_sans_narrow.woff2') format('woff2'), /* Super Modern Browsers */
@@ -16,11 +14,8 @@
 
 body {
   min-width: 320px;
-
   font-family: 'PT Sans Narrow', "Arial", sans-serif;
   font-size: 18px;
-
-
   background-color: #282828;
 }
 
@@ -30,8 +25,16 @@ body {
   padding: 0 20px;
 }
 
+.container-one--line {
+  border-bottom: 1px solid #e5ddd5;
+}
+
 .container-one--black {
   background-color: #000000;
+}
+
+.container-one--white {
+  background-color: #f8f5f2;
 }
 
 .container-one--color {
@@ -53,7 +56,7 @@ body {
   left: 0px;
   width: 50%;
   height: 100%;
-  background-image: linear-gradient(to right top, #ffffff 49% , @darkMobile 50% );
+  background-image: linear-gradient(to right top, #f8f5f2 49% , @darkMobile 50% );
 }
 
 .container-one--linear-gradient::after {
@@ -62,17 +65,8 @@ body {
   right: 0px;
   width: 50%;
   height: 100%;
-  background-image: linear-gradient(to right bottom, @darkMobile 49% , #ffffff 50% );
+  background-image: linear-gradient(to right bottom, #242424 49%, #f8f5f2 50%);
 }
-
-/*.container-one_triangle {
-  margin: 0 auto;
-  width: 0;
-  height: 0;
-  border-left: 480px solid transparent;
-  border-right: 480px solid transparent;
-  border-top: 35px solid red;
-}*/
 
 @media (min-width: 768px) {
   .container-one {
@@ -92,10 +86,10 @@ body {
     min-height: 33px;
   }
   .container-one--linear-gradient::after {
-    background-image: linear-gradient(to right bottom, @greyTabDesc 49% , #ffffff 50% );
+    background-image: linear-gradient(to right bottom, @greyTabDesc 49% , #f8f5f2 50% );
   }
   .container-one--linear-gradient::before {
-    background-image: linear-gradient(to right top, #ffffff 50%, @greyTabDesc 49%  );
+    background-image: linear-gradient(to right top, #f8f5f2 50%, @greyTabDesc 49%  );
   }
 }
 @media (min-width: 1200px) {
