@@ -1,0 +1,139 @@
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review__title {
+  margin: 0;
+  margin-top: 35px;
+  margin-bottom: 30px;
+  padding: 0;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.review__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.review__item {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.review__user-text {
+  width: 210px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.review__user-name {
+  display: inline-block;
+  padding-bottom: 10px;
+  font-size: 24px;
+  line-height: 27px;
+}
+
+.review__user-image {
+  padding-top: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.review__make {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+  .review {
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .review__title {
+    margin-top: 53px;
+    margin-bottom: 45px;
+    font-size: 40px;
+  }
+
+  .review__list {
+    width: 540px;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+
+    border: 1px solid #e5ddd5;
+    border-right-color: transparent;
+    border-left-color: transparent;
+  }
+
+  .review__user-text {
+    width: 410px;
+    margin-left: 30px;
+    margin-bottom: 0;
+  }
+
+  .review__user-name {
+    padding-top: 30px;
+  }
+
+  .review__user-image {
+    width: 80px;
+    height: 80px;
+    margin-left: 30px;
+    padding-top: 25px;
+    margin-right: 10px;
+  }
+  .review__make {
+    align-self: center;
+    display: block;
+    margin-bottom: 30px;
+    margin-top: 43px;
+    padding: 10px 30px;
+  }
+  .review__make:hover {
+    background-color: #e5ddd5;
+  }
+  .review__make:active {
+    background-color: #a58167;
+  }
+}
+
+@media (min-width: 1200px) {
+  .review__list {
+    width: 820px;
+    padding-bottom: 0;
+    border: none;
+  }
+  .review__user-text {
+    width: 570px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    margin-left: 30px;
+    padding-left: 65px;
+    padding-bottom: 40px;
+    padding-right: 60px;
+    border: 1px solid #e5ddd5;
+  }
+  .review__title {
+    margin-left: 70px;
+  }
+
+  .review__user-image {
+    width: 249px;
+    height: 160px;
+    margin-right: 0;
+    padding-top: 0;
+  }
+
+  .review__retina {
+    display: flex;
+  }
+}

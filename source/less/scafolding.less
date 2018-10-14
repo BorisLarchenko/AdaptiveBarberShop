@@ -6,6 +6,11 @@
   margin: -20px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 @font-face {
   font-family: 'PT Sans Narrow';
   src: url('../fonts/pt_sans_narrow.woff2') format('woff2'), /* Super Modern Browsers */
@@ -55,8 +60,8 @@ body {
   position: absolute;
   left: 0px;
   width: 50%;
-  height: 100%;
-  background-image: linear-gradient(to right top, #f8f5f2 49% , @darkMobile 50% );
+  height: 102%;
+  background-image: linear-gradient(to right top, #f8f5f2 50% , @darkMobile 50% );
 }
 
 .container-one--linear-gradient::after {
@@ -64,8 +69,34 @@ body {
   position: absolute;
   right: 0px;
   width: 50%;
-  height: 100%;
-  background-image: linear-gradient(to right bottom, #242424 49%, #f8f5f2 50%);
+  height: 102%;
+  background-image: linear-gradient(to right bottom, #242424 50%, #f8f5f2 50%);
+}
+
+@media (max-width: 767px) {
+  .container-one--linear-gradient-white {
+    min-height: 35px;
+    position: relative;
+  }
+
+  .container-one--linear-gradient-white::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to right top, @darkMobile  50% , #f8f5f2 50% );
+  }
+
+  .container-one--linear-gradient-white::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom, #f8f5f2 50%, @darkMobile 50%);
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -86,10 +117,12 @@ body {
     min-height: 33px;
   }
   .container-one--linear-gradient::after {
-    background-image: linear-gradient(to right bottom, @greyTabDesc 49% , #f8f5f2 50% );
+    height: 102%;
+    background-image: linear-gradient(to right bottom, @greyTabDesc 50% , #f8f5f2 50% );
   }
   .container-one--linear-gradient::before {
-    background-image: linear-gradient(to right top, #f8f5f2 50%, @greyTabDesc 49%  );
+    height: 102%;
+    background-image: linear-gradient(to right top, #f8f5f2 50%, @greyTabDesc 50%  );
   }
 }
 @media (min-width: 1200px) {
@@ -109,5 +142,12 @@ body {
   .container-one--linear-gradient {
     min-height: 65px;
   }
+  .container-one--linear-gradient::before {
+    height: 104%;
+  }
+  .container-one--linear-gradient::after {
+    height: 104%;
+  }
+
 }
 
