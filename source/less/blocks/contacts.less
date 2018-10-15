@@ -3,6 +3,11 @@
   color: white;
 }
 
+.contacts__text {
+  text-align: center;
+  padding: 20px 0;
+}
+
 .contacts__mobile {
   text-decoration: none;
   font-size: 18px;
@@ -18,9 +23,18 @@
     display: block;
     width: 280px;
     padding: 15px 0;
-    border: 1px solid white;
+    border: 1px solid #3e3e3e;
     text-align: center;
     color: white;
+  }
+
+  .contacts__mobile:hover {
+    border-color: #515151;
+  }
+
+  .contacts__mobile:active {
+    border-color: transparent;
+    color: rgba(255, 255, 255, 0.31);
   }
 }
 
@@ -29,5 +43,14 @@
 @media (min-width: 768px) {
   .contacts__title {
     text-transform: uppercase;
+  }
+
+  .contacts__text {
+    text-align: start;
+    padding-bottom: 0;
+  }
+
+  .contacts__mobile {
+    font-weight: normal;
   }
 }

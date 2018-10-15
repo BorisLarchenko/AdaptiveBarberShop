@@ -3,6 +3,7 @@
   color: white;
 }
 .social__list {
+  display: flex;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -12,7 +13,11 @@
   display: block;
   width: 106px;
   height: 100px;
-  border: 1px solid white;
+  border: 1px solid #3e3e3e;
+}
+
+.social__link:hover {
+  border-color: #515151;
 }
 
 .social__link--vk {
@@ -57,6 +62,13 @@
 @media (min-width: 1200px) {
   .social__title {
     display: inline;
+    padding-bottom: 15px;
+    font-weight: normal;
+  }
+
+  .social__list {
+    width: 165px;
+    justify-content: space-between;
   }
 
   .social__link {
