@@ -10,6 +10,8 @@ var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var run = require("run-sequence");
 var plumber = require('gulp-plumber');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify-es').default;
 
 gulp.task('style', function () {
   return gulp.src('./source/less/style.less')
@@ -23,6 +25,15 @@ gulp.task('style', function () {
     .pipe(minifyCss())
     .pipe(gulp.dest('./source/css/'));
   });
+
+gulp.task('scripts-prod', function() {
+  return gulp.src('./source/js/**/*.js')
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest('./build/js/'))
+    .pipe(rename('app.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./build/js/'));
+});
 
 gulp.task("serve", ["style"],  function () {
   server.init({
@@ -97,6 +108,7 @@ gulp.task("build", function (done) {
     "copy-prod-all",
     "images-prod",
     "style-prod",
+    "scripts-prod",
     done
   );
 });
